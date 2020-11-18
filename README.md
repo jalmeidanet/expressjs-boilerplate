@@ -5,4 +5,4 @@ This is an ExpressJS + NodeJS boiler plate to speed up the server building proce
 git clone https://github.com/jalmeidanet/expressjs-boilerplate.git
 
 # NOTES
-This boilerplate uses Nodemon and SASS, assuming that you have it installed globally. If not add them as a module or install them globally.
+This boilerplate uses Nodemon and SASS, assuming that you have it installed globally. If not add them as a module or install them globally or run with node app.js
