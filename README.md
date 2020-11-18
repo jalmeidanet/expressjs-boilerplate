@@ -20,4 +20,4 @@ APP_AUTH_TABLE          =
 APP_POOL_LIMIT          =     
 
 # NOTES
-This boilerplate uses Nodemon and SASS, assuming that you have it installed globally. If not add them as a module or install them globally or run with node app.js
+This boilerplate uses Nodemon and SASS, assuming that you have it installed globally. If not add them as a module or install them globally or run with node app.js.
