@@ -6,6 +6,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const passport = require('passport');
 const i18n = require("i18n-express");
+const session = require('express-session');
 const flash = require('connect-flash');
 const breadcrumbs = require('express-breadcrumbs');
 const ejsLayouts = require("express-ejs-layouts");
@@ -21,6 +22,15 @@ app.use(passport.session());
 app.use(flash());
 app.use(ejsLayouts);
 app.use(cors());
+
+// flash messages variables
+app.use(function (req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.warning_msg = req.flash('warning_msg');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 // view engine setup
 app.set("view engine", "ejs");
