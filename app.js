@@ -3,6 +3,7 @@ const path = require('path');
 const http = require("http");
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const cors = require('cors');
 const passport = require('passport');
 const i18n = require("i18n-express");
 const flash = require('connect-flash');
@@ -19,30 +20,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(ejsLayouts);
+app.use(cors());
 
 // view engine setup
 app.set("view engine", "ejs");
 app.set("views", "./views");
-
-// CORS settings
-app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Origin', req.headers.origin);
-  res.header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Origin, Accept');
-  if (req.method == 'OPTIONS') {
-      res.send(200);
-  } else {
-      next();
-  }
-});
-
-app.options('*', function (req, res) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Origin, Accept');
-  res.end();
-});
 
 // i18n config
 app.use(i18n({
