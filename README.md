@@ -10,7 +10,6 @@ This is an ExpressJS + NodeJS boiler plate to speed up the server building proce
 # Environment variables
 APP_PROTOCOL            =   http://  
 APP_TITLE               =   ExpressJS - Boilerplate  
-APP_NOT_FOUND           =   Page not Found  
 APP_PORT                =   8888  
 APP_HOST                =   127.0.0.1  
 APP_ENVIRONMENT         =   development  
