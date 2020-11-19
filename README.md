@@ -5,7 +5,7 @@ This is an ExpressJS + NodeJS boiler plate to speed up the server building proce
 1 - git clone https://github.com/jalmeidanet/expressjs-boilerplate.git  
 2 - create .env file and paste environment variables (project root)  
 3 - npm install  
-4 - npm run app OR node app.js
+4 - npm run app/node app.js
 
 # Environment variables
 APP_PROTOCOL            =   http://  
