@@ -16,6 +16,20 @@ const app = express();
 // dotenv configuration
 require('dotenv').config()
 
+// session set
+app.use(session({
+  key: '',
+  secret: '',
+  rolling: true,
+  name: '',
+  store: '',
+  cookie: {
+      maxAge: 1800000
+  },
+  resave: true,
+  saveUninitialized: true
+}));
+
 // initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
