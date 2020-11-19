@@ -1,13 +1,15 @@
 # Express boilerplate
-This is an ExpressJS + NodeJS boiler plate to speed up the server building process. It comes along with some node modules pre-installed. Check the package file for more info about the modules.
+This is an ExpressJS + NodeJS boilerplate to speed up the server building process. It comes along with some node modules pre-installed. Check the package file for more info about the modules.
 
 # How to use/install?
-git clone https://github.com/jalmeidanet/expressjs-boilerplate.git
+1 - git clone https://github.com/jalmeidanet/expressjs-boilerplate.git  
+2 - create .env file and paste environment variables (project root)  
+3 - npm install  
+4 - npm run app/node app.js
 
 # Environment variables
 APP_PROTOCOL            =   http://  
 APP_TITLE               =   ExpressJS - Boilerplate  
-APP_NOT_FOUND           =   Page not Found  
 APP_PORT                =   8888  
 APP_HOST                =   127.0.0.1  
 APP_ENVIRONMENT         =   development  
